@@ -9,3 +9,16 @@ static 메서드를 만들 때 주의할 점은 객체의 멤버 변수나 메�
 ### Math class
 
 Java의 Math 클래스에는 계산과 관련된 다양한 메서드들이 있는데, 이 메서드들은 모두 static으로 구현되어 있다. 따라서 Math 클래스는 객체를 따로 생성할 필요가 없고, 클래스를 바로 사용하여 해당 메서드들을 이용한다.
+
+```java
+import java.lang.Math;
+
+public class Sample {
+  public static void main(String[] args) {
+    System.out.println(Math.max(10,100)); // 100
+    System.out.println(Math.min(10,100)); // 10
+  }
+}
+```
+
+이처럼 객체를 참조할 일이 없고 다양한 곳에서 사용할 가능성이 있는 변수/메서드라면, static 키워드를 활용하는 것이 동일한 메서드를 인스턴스마다 생성하게 하는 것보다 메모리 사용에 더 이득을 취할 수도 있다.
