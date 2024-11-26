@@ -27,8 +27,7 @@
 ##### 의존성 주입의 단점
 
 - 결국에는 모듈이 더 생기게 되므로 복잡도가 증가함
-- 종속성 주입자체가 컴파일을 할 때가 아닌 런타임 때 일어나기 때문에 컴파일을 할
-  때 종속성 주입에 관한 에러를 잡기가 어려워질 수 있음
+- 종속성 주입자체가 컴파일을 할 때가 아닌 런타임 때 일어나기 때문에 컴파일을 할 때 종속성 주입에 관한 에러를 잡기가 어려워질 수 있음
 
 ##### DI가 적용되지 않았을 때
 
@@ -92,6 +91,11 @@ emailNotification.notify("이메일 의존성 주입!");
 
 const smsNotification = new Notification(smsService);
 smsNotification.notify("SMS 의존성 주입!");
+
+/*
+이메일 전송: 이메일 의존성 주입!
+SMS 전송: SMS 의존성 주입!
+*/
 ```
 
 - EmailService 대신 SMSService를 쉽게 교체할 수 있음
@@ -105,6 +109,8 @@ class MockService {
 
 const mockNotification = new Notification(new MockService());
 mockNotification.notify("테스트 중입니다!");
+
+// Mock 이메일 전송: 테스트 중입니다!
 ```
 
 - 테스트 시 MockService를 주입하여 실제 네트워크 요청 없이 동작을 검증할 수 있음
