@@ -112,3 +112,14 @@ processor1.processPayment(100); // Paid $100 using PayPal
 const processor2 = new PaymentProcessor(creditCard);
 processor2.processPayment(200); // Paid $200 using Credit Card
 ```
+
+## 4. 전략패턴과 의존성 주입의 차이점
+
+- 특정 알고리즘이나 동작을 선택해 사용할 수 있도록 하기 위한 디자인패턴이라는 공통점
+- 차이점
+    - 목적
+        - 전략패턴: 동적인 알고리즘 할당, 변경
+        - DI: 결함도 감소 및 유연성 향상
+    - 적용 방식
+        - 전략패턴: 객체 내부에서 전략을 교체
+        - DI: 객체 외부에서 의존성을 주입, 원하는 로직으로 동작하도록 함
