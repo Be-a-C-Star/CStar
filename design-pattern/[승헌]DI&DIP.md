@@ -123,3 +123,4 @@ processor2.processPayment(200); // Paid $200 using Credit Card
     - 적용 방식
         - 전략패턴: 객체 내부에서 전략을 교체
         - DI: 객체 외부에서 의존성을 주입, 원하는 로직으로 동작하도록 함
+
