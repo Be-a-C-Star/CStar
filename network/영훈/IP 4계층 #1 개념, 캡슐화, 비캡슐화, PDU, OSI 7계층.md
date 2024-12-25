@@ -4,7 +4,7 @@
 
 - TCP(Transmission Control Protocol) / IP(Internet Protocol)
 - 인터넷을 통해 데이터를 보낼 때 주로 TCP와 IP를 이용해서 보내기 때문에 이런 용어를 가짐
-  ![alt text](<../스크린샷 2024-12-23 오후 5.21.59.png>)
+  ![alt text](<스크린샷 2024-12-23 오후 5.21.59.png>)
 - 각 계층은 서로 독립적임
 - 네트워크 접속계층은 링크계층이라고도 불림
 
