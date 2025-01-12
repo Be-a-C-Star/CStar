@@ -163,6 +163,7 @@ MTU와 MSS는 고정적인 설정이고, PMTUD는 동적으로 경로를 조정�
 
 ## Application Layer(애플리케이션 계층)
 
+
 - 사용자와 직접 상호작용
 - HTTP, FTP, SMTP, DNS 등
 - 사용자와 애플리케이션이 네트워크와 통신하도록 도움
