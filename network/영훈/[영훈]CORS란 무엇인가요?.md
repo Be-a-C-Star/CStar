@@ -50,10 +50,18 @@ CORS를 알아보기 앞서 오리진과 SOP를 먼저 알아보자.
 - Accept-Language
 - Content-Language
 - Content-Type
-- application/x-www-form-urlencoded
-- multipart/form-data
-- text/plain
+  - application/x-www-form-urlencoded
+  - multipart/form-data
+  - text/plain
 - Range (참고로 fireforx 브라우저는 해당 헤더를 허용하지 않습니다.)
+
+프론트엔드 개발자는 주로 서버에 데이터를 요청할때 헤더에 `'Content-Type': 'application/json'` 을 담아서 보내기때문에 대부분의 요청은 Preflight Request으로 보내지게 된다.
+
+그러면 브라우저가 서버에 요청을 하고 CORS를 확인하는 과정을 살펴보자.
+
+1. 요청 시 헤더에 Origin(Ex. http://localhost:3000) 필드를 담아서 보냄
+2. 서버에서 응답 헤더로 Access-Control-Allow-Origin(허용할 출처)를 담아서 브라우저로 보냄. 이 때, 브라우저는 Access-Control-Allow-Origin 필드에 Origin에서 보냈던 출처가 있는지 검토한다.
+3. 일치하는 출처가 없으면 CORS 에러를 반환한다.
 
 #### preflight request과정
 
